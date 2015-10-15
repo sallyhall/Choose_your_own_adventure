@@ -1,0 +1,52 @@
+button{
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin:auto;
+}
+
+.visible{
+  display: inline-block;
+}
+
+.hidden{
+  display: none;
+}
+
+#start{
+  @extend .button;
+  background-color: green;
+}
+
+#sword{
+  @extend .button;
+  background-image: url("images/sword.png");
+}
+#crossbow{
+  @extend .button;
+  background-image: url("images/crossbow.png");
+}
+#forest{
+  @extend .button;
+  background-image: url("images/forest.png");
+}
+#sea{
+  @extend .button;
+  background-image: url("images/sea.png");
+}
+#cave{
+  @extend .button;
+  background-image: url("images/cave.png");
+}
+#rock{
+  @extend .button;
+  background-image: url("images/rock.png");
+}
+#beach{
+  @extend .button;
+  background-image: url("images/beach.png");
+}
+#boat{
+  @extend .button;
+  background-image: url("images/boat.png");
+}

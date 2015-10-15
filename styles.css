@@ -1,0 +1,38 @@
+button {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin: auto; }
+
+.visible {
+  display: inline-block; }
+
+.hidden {
+  display: none; }
+
+#start {
+  background-color: green; }
+
+#sword {
+  background-image: url("images/sword.png"); }
+
+#crossbow {
+  background-image: url("images/crossbow.png"); }
+
+#forest {
+  background-image: url("images/forest.png"); }
+
+#sea {
+  background-image: url("images/sea.png"); }
+
+#cave {
+  background-image: url("images/cave.png"); }
+
+#rock {
+  background-image: url("images/rock.png"); }
+
+#beach {
+  background-image: url("images/beach.png"); }
+
+#boat {
+  background-image: url("images/boat.png"); }

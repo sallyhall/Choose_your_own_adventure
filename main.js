@@ -1,32 +1,44 @@
 var choice;
 var increaseScore;
+var promptText = document.getElementById('prompt');
 
 var knight = {
-  weapon: "none",
+  weapon: "sword",
   setting: "home",
   score: 0,
   alive: true
 };
 
 function main(){
-  alert("Good morning! It's time for an adventure");
+  // alert("Good morning! It's time for an adventure");
+  promptText.innerHTML = "Good morning! It's time for an adventure";
   knight.weapon=prompt("Choose your weapon: sword or harpoon?");
+  if (knight.weapon===null){
+    return;
+  }
   console.log(knight.weapon);
 
   knight.setting=prompt("Will you go to the forest or the sea?");
+  if (knight.setting===null){
+    return;
+  }
   gainPoints();
   switch (knight.setting){
     case "sea":
       choice=prompt("There is an empty boat! What do you do? Enter beach if you are going to walk up the beach, enter boat if you are going to get in the boat and paddle out to sea.");
+      if (choice===null){
+        return;
+      }
       gainPoints();
       break;
     case "forest":
       choice=prompt("You've just stubmled on a creepy, dark cave. What do you do? Enter rock if you throw a rock in side, enter proceed if you go on in.");
+      if (choice===null){
+        return;
+      }
       gainPoints();
       break;
     default:
-        alert("I'm not sure where you're going, but you'll be on your own from now on.");
-        losePoints();
         return;
   }
 
@@ -43,6 +55,9 @@ function main(){
       }else{
         gainPoints();
         choice=prompt("You have encountered a mermaid! She asks you this riddle: Alive without breath, As cold as death; Never thirsty, ever drinking, All in mail never clinking. What am I?");
+        if (choice===null){
+          return;
+        }
         if(choice==="fish"){
           gainPoints();
           alert("You are brilliant! You solved the mermaid's riddle, so she gives you her gold and allows you to return home.");

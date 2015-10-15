@@ -84,7 +84,13 @@ console.log("The letter is", letter);
 
 // Put your answer below -------------------------
 
- [c]: z then y
+ // [c]: z then y
+ //
+ // First, letter is set to x.
+ // Then, a one second timer starts for the anonymous function.
+ // During that second, the letter is changed to z, and the letter is printed (z).
+ // After the second is up, the anonymous function changes the letter
+ // to y and prints the letter (y);
 
 // -----------------------------------------------
 
@@ -145,14 +151,14 @@ var spanishColor = function(colorName) {
 
 // Put your answer below -------------------------
 var spanishColor = function(colorName) {
-  var espanol{
+  var espanol = {
     rojo: "#ff0000",
     blanco: "#ffffff",
     azul: "#0000ff",
     verde: "#00ff00",
     negro: "#000000"
   }
-  return espanol.colorName;
+  return espanol[colorName];
 }
 // -----------------------------------------------
 
@@ -292,7 +298,9 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+
 //It is adding undefined to a number, which is not a number (NaN).
+
 var speed = 0;
 
 var accelerate = function(amount) {
@@ -346,6 +354,13 @@ var callLater = function(timeout, callback) {
 };
 
 // Put your answer below -------------------------
+var callLater = function(timeout, callback) {
+  if((type timeout)!="number"){
+    var callback=timeout;
+    timeout=1000;
+  }
+  setTimeout(callback, timeout);
+};
 
 
 // -----------------------------------------------
