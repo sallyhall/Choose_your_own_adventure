@@ -1,84 +1,91 @@
-button{
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-  margin: 30px auto;
+button {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 30px auto
 }
 
-.hidden{
-  display: none;
+.hidden {
+    display: none
 }
 
-.choices{
-  width: 55%;
-  margin: 30px auto;
-  text-align: center;
+.ownLine{
+  display: block;
 }
 
-.scoreboard{
-  width: 125px;
-  height: 37.5px;
-  margin-left: 20%;
-  text-align: center;
-  font-size: 2em;
-  background-color: red;
-  color: white;
-  border-radius: 3px;
+.choices {
+    width: 55%;
+    margin: 30px auto;
+    text-align: center
 }
 
-#start{
-  
-  background-color: green;
+.scoreboard {
+    width: 125px;
+    height: 37.5px;
+    margin-left: 20%;
+    text-align: center;
+    font-size: 2em;
+    background-color: red;
+    color: #fff;
+    border-radius: 3px
 }
 
-#sword{
-
-  background-image: url("images/sword.png");
+#start {
+  background-image: url(images/steve.png)
 }
-#crossbow{
 
-  background-image: url("images/crossbow.png");
+#sword {
+    background-image: url(images/sword.png)
 }
-#forest{
 
-  background-image: url("images/forest.png");
+#crossbow {
+    background-image: url(images/crossbow.png)
 }
-#sea{
 
-  background-image: url("images/sea.png");
+#forest {
+    background-image: url(images/forest.png)
 }
-#cave{
 
-  background-image: url("images/cave.png");
+#sea {
+    background-image: url(images/sea.png)
 }
-#rock{
 
-  background-image: url("images/rock.png");
+#cave {
+    background-image: url(images/cave.png)
 }
-#beach{
 
-  background-image: url("images/beach.png");
+#rock {
+    background-image: url(images/rock.png)
 }
-#boat{
 
-  background-image: url("images/boat.png");
+#beach {
+    background-image: url(images/beach.png)
 }
-#fail{
 
-  background-image: url("images/fail.png");
-  background-size: cover;
+#boat {
+    background-image: url(images/boat.png)
 }
-#gold{
 
-  background-image: url("images/gold.png");
+#fail {
+    background-image: url(images/fail.png);
+    background-size: cover
 }
-#submit{
 
-  height:25px;
-  background-color: red;
-  border-radius: 2px;
+#gold {
+    background-image: url(images/gold.png)
 }
-#prompt{
-  font-size: 2em;
-  text-align: left;
+
+#mermaid {
+    background-image: url(images/mermaid.png)
+}
+
+#submit {
+    height: 25px;
+    background-color: red;
+    border-radius: 2px
+}
+
+#prompt {
+    font-size: 2em;
+    text-align: left
 }

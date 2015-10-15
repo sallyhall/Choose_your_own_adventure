@@ -7,6 +7,9 @@ button {
 .hidden {
   display: none; }
 
+.ownLine {
+  display: block; }
+
 .choices {
   width: 55%;
   margin: 30px auto;
@@ -19,42 +22,45 @@ button {
   text-align: center;
   font-size: 2em;
   background-color: red;
-  color: white;
+  color: #fff;
   border-radius: 3px; }
 
 #start {
-  background-color: green; }
+  background-image: url(images/steve.png); }
 
 #sword {
-  background-image: url("images/sword.png"); }
+  background-image: url(images/sword.png); }
 
 #crossbow {
-  background-image: url("images/crossbow.png"); }
+  background-image: url(images/crossbow.png); }
 
 #forest {
-  background-image: url("images/forest.png"); }
+  background-image: url(images/forest.png); }
 
 #sea {
-  background-image: url("images/sea.png"); }
+  background-image: url(images/sea.png); }
 
 #cave {
-  background-image: url("images/cave.png"); }
+  background-image: url(images/cave.png); }
 
 #rock {
-  background-image: url("images/rock.png"); }
+  background-image: url(images/rock.png); }
 
 #beach {
-  background-image: url("images/beach.png"); }
+  background-image: url(images/beach.png); }
 
 #boat {
-  background-image: url("images/boat.png"); }
+  background-image: url(images/boat.png); }
 
 #fail {
-  background-image: url("images/fail.png");
+  background-image: url(images/fail.png);
   background-size: cover; }
 
 #gold {
-  background-image: url("images/gold.png"); }
+  background-image: url(images/gold.png); }
+
+#mermaid {
+  background-image: url(images/mermaid.png); }
 
 #submit {
   height: 25px;
