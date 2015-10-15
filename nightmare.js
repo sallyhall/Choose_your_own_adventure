@@ -10,13 +10,13 @@ cave = document.getElementById("cave");
 rock = document.getElementById("rock");
 boat = document.getElementById("boat");
 beach = document.getElementById("beach");
-fail = fail;
+fail = document.getElementById("fail");
 gold = document.getElementById("gold");
 mermaid = document.getElementById("mermaid");
 answer = document.getElementById("answer");
 submit = document.getElementById("submit");
 //stores the amount to increase or decrease the score
-var increaseScore;
+var changeScore;
 //object to hold player information
 var knight = {
     weapon: "none",
@@ -42,8 +42,8 @@ var decisions = {
 function gainPoints() {
         var max = 5;
         var min = 1;
-        increaseScore = parseInt((Math.random() * (max - min + 1)), 10) + min;
-        knight.score += increaseScore;
+        changeScore = parseInt((Math.random() * (max - min + 1)), 10) + min;
+        knight.score += changeScore;
         scoreText.innerHTML = knight.score;
     }
     //subtracts a random number of points between 1 and 5 from the score.
@@ -51,8 +51,8 @@ function gainPoints() {
 function losePoints() {
     var max = 5;
     var min = 1;
-    increaseScore = parseInt((Math.random() * (max - min + 1)), 10) + min;
-    knight.score -= increaseScore;
+    changeScore = parseInt((Math.random() * (max - min + 1)), 10) + min;
+    knight.score -= changeScore;
     scoreText.innerHTML = knight.score;
 }
 

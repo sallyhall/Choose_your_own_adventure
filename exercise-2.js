@@ -355,7 +355,9 @@ var callLater = function(timeout, callback) {
 
 // Put your answer below -------------------------
 var callLater = function(timeout, callback) {
-  if((type timeout)!="number"){
+  var args = Array.prototype.slice.call(arguments);
+
+  if(args.length===1;){
     var callback=timeout;
     timeout=1000;
   }
@@ -374,18 +376,28 @@ var callLater = function(timeout, callback) {
 // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript.
 // ---------------------
 
-function max(){
+function max(a,b){
     "use strict";
-    //...
+    if(a>=b){
+      return a;
+    }else{
+      return b;
+    }
 }
 
 // ---------------------
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // ---------------------
 
-function maxOfThree(){
+function maxOfThree(a,b,c){
     "use strict";
-    //...
+    if(a>=b && a>=c){
+      return a;
+    }else if (b>=a && b>=c){
+      return b;
+    }else{
+      return c;
+    }
 }
 
 // ---------------------
@@ -394,7 +406,25 @@ function maxOfThree(){
 
 function isVowel(char){
     "use strict";
-    //...
+    switch (char){
+      case 'a':
+        return true;
+        break;
+      case 'e':
+        return true;
+        break;
+      case 'i':
+        return true;
+        break;
+      case 'o':
+        return true;
+        break;
+      case 'u':
+        return true;
+        break;
+      default:
+        return false;
+    }
 }
 
 // ---------------------
@@ -403,30 +433,44 @@ function isVowel(char){
 
 function rovarspraket(phrase){
     "use strict";
-    //...
+    var letters = phrase.split('');
+    for(var i=0;i<letters.length;i++){
+      if (!isVowel(letters[i])){
+        letters[i]=letters[i]+"o"+letters[i];
+      }
+    }
+    return letters.join('');
 }
 
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
 // ---------------------
 
-function sum(){
+function sum(numbers){
     "use strict";
-    //...
+    var total=0;
+    numbers.forEach(function (number) {
+      total+=number;
+    });
+    return total;
 }
 
-function multiply(){
+function multiply(numbers){
     "use strict";
-    //...
+    var total=1;
+    numbers.forEach(function (number) {
+      total*=number;
+    });
+    return total;
 }
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse(){
+function reverse(string){
     "use strict";
-    //...
+    return string.split('').reverse().join('');
 }
 
 // ---------------------
@@ -435,7 +479,13 @@ function reverse(){
 
 function findLongestWord(words){
     "use strict";
-    //...
+    var longest=words[0];
+    words.forEach(function(string){
+      if (string.length>longest.length){
+        longest=string;
+      }
+    })
+    return longest;
 }
 
 // ---------------------
@@ -444,7 +494,13 @@ function findLongestWord(words){
 
 function filterLongWords(words, i){
     "use strict";
-    //...
+    var filteredWords=[];
+    words.forEach(function(string){
+      if (string.length>i){
+        filteredWords.push(string);
+      }
+    })
+    return filteredWords;
 }
 
 // ---------------------
@@ -453,5 +509,14 @@ function filterLongWords(words, i){
 
 function charFreq(string){
     "use strict";
-    //...
+    var frequencies = new Object();
+    var letters = string.split('');
+    for(var i=0;i<string.length;i++){
+      var char=letters[i];
+      if (frequencies.hasOwnProperty(char)){
+        frequencies[char]++;
+      }else{frequencies[char]=1;
+    }
+  }
+    return frequencies;
 }
