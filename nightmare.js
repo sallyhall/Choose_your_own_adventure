@@ -8,8 +8,7 @@ $(document).ready(function() {
         weapon: "none",
         setting: "home",
         score: 0,
-        alive: true
-    };
+        };
 
     function gainPoints() {
         var max = 5;
@@ -28,6 +27,7 @@ $(document).ready(function() {
             knight.score -= increaseScore;
             scoreText.text(knight.score);
         }
+
         //start button, gives the choice of weapons
     $("#start").click(function() {
         $("#start").addClass("hidden");

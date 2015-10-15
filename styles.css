@@ -4,9 +4,6 @@ button {
   display: inline-block;
   margin: 30px auto; }
 
-.visible {
-  display: inline-block; }
-
 .hidden {
   display: none; }
 
