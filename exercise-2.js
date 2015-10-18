@@ -195,7 +195,7 @@ foo = "bar";
 
 var callTenTimes = function(callback) {
   for(var i = 0; i < 10; i++) {
-    console.log(callback);
+    callback();
   }
 };
 
@@ -203,9 +203,11 @@ var callTenTimes = function(callback) {
 
 var callNTimes = function(callback,n) {
   for(var i = 0; i < n; i++) {
-    console.log(callback);
+    callback();
   }
 };
+
+
 
 // -----------------------------------------------
 
@@ -266,7 +268,8 @@ var twoPlusTwo = addNumbers(2,2);
 // Put your answer below -------------------------
 
 var addNumbers = function(numberA, numberB) {
-  return function(numberA, numberB){
+  console.log(numberA,numberB);
+  return function(){
     return (numberA + numberB);
   };
 };
@@ -304,7 +307,7 @@ var accelerate = function(amount) {
 var speed = 0;
 
 var accelerate = function(amount) {
-  if((type amount)==="number"){
+  if((typeof amount)==="number"){
     speed += amount;
   }else{
     speed++;
@@ -355,19 +358,16 @@ var callLater = function(timeout, callback) {
 
 // Put your answer below -------------------------
 var callLater = function(timeout, callback) {
-  var args = Array.prototype.slice.call(arguments);
-
-  if(args.length===1;){
-    var callback=timeout;
-    timeout=1000;
-  }
-  setTimeout(callback, timeout);
+    var args = Array.prototype.slice.call(arguments);
+    if (args.length === 1) {
+        callback = timeout;
+        timeout = 1000;
+    }
+    setTimeout(callback, timeout);
 };
 
 
 // -----------------------------------------------
-
-
 
 
 //////////////////////////////////////////////////
@@ -448,6 +448,7 @@ function rovarspraket(phrase){
 
 function sum(numbers){
     "use strict";
+    var numbers = Array.prototype.slice.call(arguments);
     var total=0;
     numbers.forEach(function (number) {
       total+=number;
@@ -458,6 +459,7 @@ function sum(numbers){
 function multiply(numbers){
     "use strict";
     var total=1;
+    var numbers = Array.prototype.slice.call(arguments);
     numbers.forEach(function (number) {
       total*=number;
     });
@@ -480,6 +482,7 @@ function reverse(string){
 function findLongestWord(words){
     "use strict";
     var longest=words[0];
+    words = Array.prototype.slice.call(arguments);
     words.forEach(function(string){
       if (string.length>longest.length){
         longest=string;
@@ -499,24 +502,24 @@ function filterLongWords(words, i){
       if (string.length>i){
         filteredWords.push(string);
       }
-    })
+    });
     return filteredWords;
 }
 
 // ---------------------
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 // ---------------------
-
-function charFreq(string){
+function charFreq(string) {
     "use strict";
-    var frequencies = new Object();
+    var frequencies = {};
     var letters = string.split('');
-    for(var i=0;i<string.length;i++){
-      var char=letters[i];
-      if (frequencies.hasOwnProperty(char)){
-        frequencies[char]++;
-      }else{frequencies[char]=1;
+    for (var i = 0; i < string.length; i++) {
+        var char = letters[i];
+        if (frequencies.hasOwnProperty(char)) {
+            frequencies[char]++;
+        } else {
+            frequencies[char] = 1;
+        }
     }
-  }
     return frequencies;
 }
