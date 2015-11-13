@@ -30,7 +30,7 @@ var decisions = {
     forest: "You've just stumbled on a creepy, dark cave. Do you throw a rock in first, or just march right in?",
     defeatDragon: "You have awoken the dragon and he runs out of the cave right at you! Thank goodness you brought your sword. You have slain the dragon, stolen its treasure, and return to your castle as a hero. Huzzah!",
     dragonDeath: "You have awoken the dragon and he runs out of the cave right at you! Your weapon is no match for this beast. You should have chosen your sword. The dragon destroys you in a single bite and your entire family forgets about you by Christmas.",
-    cave: "You have awoken the dragon and he runs out of the cave right at you! Your weapon is no match for this beast. You should have chosen your sword. The dragon destroys you in a single bite and your entire family forgets about you by Christmas.",
+    cave: "What kind of knight just walks into a cave without checking for dragons first? Of course there was a dragon in there. He eats you and your family chalks it up to natural selection.",
     defeatSeaMonster: "You have encountered a sea monster! Thank goodness you brought your crossbow. You have slayed the sea monster and return to your castle a hero.",
     seaMonsterDeath: "You have encountered a sea monster! Your weapon is no match for this beast. You should have chosen your crossbow. The sea monster destroys you in a single bite and your entire family forgets about you by Christmas.",
     boat: "There is an empty boat! What do you do: Continue to walk up the beach, or get in the boat and paddle out to sea?",
