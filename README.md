@@ -1,5 +1,7 @@
 # Choose Your Own Adventure
 
+Class assignment. View live here: http://sallykingston.me/Choose_your_own_adventure/
+
 ## Description
 You will be creating a text based game that will allow the player to make decisions that determine their outcome.
 
